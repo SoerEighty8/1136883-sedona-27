@@ -37,14 +37,25 @@
     </section>
     <div>
       <h2>Поиск гостиници в седоне</h2>
-      <p>Дата заезда</p>
-      <!-- форма -->
-      <p>Дата выезда</p>
-      <!-- форма -->
-      <p>Взрослые</p>
-      <!-- форма -->
-      <p>Дети</p>
-      <!-- форма -->
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="appointment-date1">Дата заезда</label>
+          <input id="appointment-date1" type="date" name="date" value="2017-04-27">
+        </p>
+        <p>
+          <label for="appointment-date2">Дата выезда</label>
+          <input id="appointment-date2" type="date" name="date" value="2017-07-04">
+        </p>
+        <p>
+          <input type="radio" name="adult" value="2" id="adult">
+          <label for="adult">Взрослые</label>
+        </p>
+        <p>
+          <input type="radio" name="child" value="0" id="child">
+          <label for="child">Дети</label>
+        </p>
+
+     </form>
     </div>
   </main>
   <footer>
