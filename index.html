@@ -3,39 +3,47 @@
  <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
  </head>
  <body>
-  <header>
-    <nav>
-      <a>
+  <header class="main-header">
+     <nav class="site-nav">
+     <a class="main-logo">
         <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип сайта поиска жилья Седона">
-      </a>
-      <ul>
+     </a>
+      <ul class="nav" >
         <li><a href="info.html">Информация</a></li>
         <li><a href="media.html">Фото и видео</a></li>
         <li><a href="map.html">Карта штата</a></li>
         <li><a href="catalog.html">Гостиници</a></li>
       </ul>
-    </nav>
+     </nav>
   </header>
   <main>
-    <h1 class='visually-hidden'> Поиск жилья в городе Седона</h1>
-    <img src="img/intro-welcome.svg" width="150" height="150" alt="Приветствие">
-    <section>
+    <h1 class='visually-hidden'> Поиск жилья в городе Седона </h1>
+      <div class="banner">
+       <img  class="banner-welcome" src="img/intro-welcome.svg" width="459" height="353" alt="Приветствие">
+      </div>
+
+    <div class="intro-text">
       <h2> Седона — небольшой городок в Аризоне,
         заслуживающий большего! </h2>
       <p>
         Рассмотрим 5 причин, почему седона круче, чем гранд каньон!
       </p>
-    </section>
-    <section>
+    </div>
+
+
+      <section class="intro-text">
       <h2>Заинтересовались?</h2>
       <p>
         Укажите предполагаемые даты поездки,
         и мы покажем вам лучшие предложения гостиниц в седоне
       </p>
     </section>
-    <div>
+    <div class="form">
       <h2><button>Поиск гостиници в седоне</button></h2>
       <form action="https://echo.htmlacademy.ru" method="post">
         <p>
@@ -63,17 +71,41 @@
     </div>
   </main>
   <footer>
-    <p><a href="index.html">#visitsedona</a></p>
-    <div>
-      <ul>
-        <li><a href="#">Твиттер</a></li>
-        <li><a href="#">Фейсбук</a></li>
-        <li><a href="#">Ютуб</a></li>
-      </ul>
-    </div>
-    <p>
-      website by <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="50" height="50" alt="Логотип сайта HTML Academy"> </a>
-    </p>
-  </footer>
+      <div class="main-footer">
+        <div class="contacts">
+          <p class="sedona-hashtag">#Visitsedona</p>
+          <a href="tel:+74956660266">Тел: +7(495) 666-02-66</a>
+        </div>
+
+        <ul class="socialmedia-list">
+          <li class="socialmedia-item">
+            <a href="#">
+              <span class="visually-hidden">Седона в Твиттере</span>
+              <img  src="img\twitter.svg" width="17" height="15">
+            </a>
+          </li>
+          <li class="socialmedia-item">
+            <a href="#">
+              <span class="visually-hidden">Седона на Фейсбуке</span>
+              <img src="img\fb-icon.svg" width="12" height="22">
+            </a>
+          </li>
+          <li class="socialmedia-item">
+            <a href="#">
+              <span class="visually-hidden">Седона на Ютубе</span>
+              <img src="img\youtube.svg" width="20" height="16">
+            </a>
+          </li>
+        </ul>
+
+        <p class="copyright">
+          Website by
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <img class="logo-htmlacademy" src="img\logo-htmlacademy.svg" width="115" height="41">
+            </img>
+          </a>
+        </p>
+      </div>
+    </footer>
  </body>
  </html>
