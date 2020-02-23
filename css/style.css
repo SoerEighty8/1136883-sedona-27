@@ -96,7 +96,6 @@ body {
 
   /* шапка*/
 
-  }
 .main-header {
   line-height: 26px;
   font-weight: 700;
@@ -201,7 +200,15 @@ margin-left: 30px;
   line-height: 21px;
   font-weight: 700;
   color: #000000;
-  vertical-align: top;
+
+}
+.found-hotels .hotel-name:hover,
+.found-hotels .hotel-name:focus {
+  color: #81b3d2;
+}
+
+.found-hotels .hotel-name:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .type-price span {
