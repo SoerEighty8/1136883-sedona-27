@@ -201,18 +201,18 @@ html {
   background-repeat: no-repeat;
 }
 
+.banner::after {
+  position: absolute;
+  content: url("../img/intro-mask.svg");
+  height: 56px;
+  bottom: 0;
+}
+
 .banner img {
   display: block;
   margin: 0 auto;
 }
 
-.banner::after {
-  position: absolute;
-  content: url("../img/intro-mask.svg");
-  width: auto;
-  height: 57px;
-  bottom: 0;
-}
 
 /* введение*/
 
@@ -414,24 +414,35 @@ height: 256px;
 
 /* форма поиска на главной*/
 
-.modal {
+@keyframes bounce {
+  0% {
+    transform: translateY(-110px);
+
+  }
+
+  100% {
+
+    transform: translateY(0);
+  }
+}
+
+
+
+.mod {
   position: relative;
   z-index: 4;
 }
 
-.modal-close {
+.mod-close {
   display: none;
 }
 
-.modal-bounce {
-  animation: bounce 0.6s;
+.mod-bounce {
+  animation: bounce 1s;
 }
 
-.modal-error {
-  animation: shake 0.6s;
-}
 
-.searching-form {
+.search-form {
   position: absolute;
   left: 50%;
 
@@ -445,25 +456,25 @@ height: 256px;
   box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
-.searching-item {
+.search-item {
   display: flex;
   align-items: center;
   width: 100%;
   margin-bottom: 29px;
 }
 
-.wrapper-numbers {
+.wrap-numbers {
   display: flex;
   flex-wrap: wrap;
 }
 
-.wrapper-background {
+.wrap-background {
   display: flex;
 
   background-color: #f2f2f2;
 }
 
-.searching-item input {
+.search-item input {
   width: 308px;
   padding: 6px 12px;
 
@@ -476,22 +487,22 @@ height: 256px;
   border: none;
 }
 
-.searching-item input:hover {
+.search-item input:hover {
   background-color: #ebebeb;
 }
 
-.searching-item input:focus {
+.search-item input:focus {
   background-color: #ffffff;
   outline: 2px solid #e5e5e5;
 }
 
 
-.searching-item input::placeholder,
-.searching-item input:focus::placeholder {
+.search-item input::placeholder,
+.search-item input:focus::placeholder {
   color: #000000;
 }
 
-.searching-item label {
+.search-item label {
   display: inline-block;
   width: 112px;
 
@@ -502,17 +513,17 @@ height: 256px;
   color: #000000;
 }
 
-.searching-item .label-children {
+.search-item .label-children {
   padding-left: 50px;
   margin-right: 10px;
 }
 
-.searching-item-numbers {
+.search-item-numbers {
   width: 229px;
   margin-bottom: 55px;
 }
 
-.searching-item-numbers input {
+.search-item-numbers input {
   width: 38px;
   text-align: center;
 }
@@ -527,7 +538,7 @@ height: 256px;
   background-color: #f2f2f2;
 }
 
-.searching-item svg {
+.search-item svg {
   vertical-align: middle;
 }
 
@@ -546,9 +557,10 @@ height: 256px;
   fill: #81b3d2;
 }
 
-.searching-form .button-blue {
-  padding: 16px 196px;
-  margin-top: auto;
+.search-form .button-blue {
+  width: 458px;
+  height: 58px;
+
   cursor: pointer;
 
   font-size: 21px;
@@ -896,7 +908,7 @@ input[type="checkbox"]:focus+label::before {
 }
 .hotels-item  {
   display: flex;
-
+  align-items: flex-start;
   padding-top: 29px;
   padding-bottom: 29px;
 
@@ -908,6 +920,7 @@ input[type="checkbox"]:focus+label::before {
 
   flex-grow: 1;
   margin-left: 30px;
+  margin-right: 30px;
 }
 
 .hotels-item:last-child {
@@ -938,17 +951,17 @@ input[type="checkbox"]:focus+label::before {
   display: inline-block;
   width: 100px;
   margin-right: 12px;
+  margin-top: 8px;
   text-align: left;
   vertical-align: middle;
-
   }
 .info-booking {
-  margin-top: auto;
-  margin-bottom: 3px;
+  margin-top: 15px;
+
   }
 
 .info-booking .button-blue {
-  margin-right: 6px;
+  margin-right: 3px;
   }
 
 .hotels-info .button-blue,
@@ -965,7 +978,6 @@ input[type="checkbox"]:focus+label::before {
   margin-left: auto;
   margin-right: 72px;
 
-  border: solid 1px black;
   }
 
 .star {
@@ -990,13 +1002,11 @@ input[type="checkbox"]:focus+label::before {
 }
 .rating{
  display: block;
-
  font-size: 14px;
  width: 110px;
- margin-top: 44px;
-
-
+ margin-top: 50px;
  padding: 2px 13px;
+
  color: #666666;
  background-color: #f2f2f2;
 }
@@ -1006,7 +1016,7 @@ input[type="checkbox"]:focus+label::before {
 
 .map {
   position: relative;
-  min-height: 593px;
+  max-height: 595px;
 
   background-color: #cbdda9;
 }
@@ -1018,8 +1028,6 @@ input[type="checkbox"]:focus+label::before {
   z-index: 1;
 
   margin: 0;
-
-  text-align: center;
 }
 
 .map iframe {
@@ -1031,6 +1039,7 @@ input[type="checkbox"]:focus+label::before {
 
 
 /*подвал*/
+
 .wrap-foot {
   position: relative;
   z-index: 3;
@@ -1038,13 +1047,18 @@ input[type="checkbox"]:focus+label::before {
 
 .main-footer {
   position: absolute;
- bottom: 0;
+  bottom: 0;
   display:flex;
   flex-wrap: wrap;
   align-items: center;
   min-height: 120px;
 
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.catalog .main-footer {
+  position: relative;
+  bottom: 0;
 }
 
 .contacts {
