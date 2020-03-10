@@ -1,0 +1,1 @@
+var link = document.querySelector("section.search-hotel .button-brown"); popup = document.querySelector(".mod"); form = popup.querySelector("form");link.addEventListener("click", function (evt) {evt.preventDefault();popup.classList.toggle("mod-close");popup.classList.add("mod-bounce");});
