@@ -1,6 +1,5 @@
 
 /* основные стили */
-
 body {
   margin: 0;
   padding: 0;
@@ -11,14 +10,12 @@ body {
   font-weight: 400;
   color: #333333;
   text-transform: uppercase;
-   background-color: #f2f2f2;
-    }
-
+  background-color: #f2f2f2;
+}
 
 a {
   text-decoration: none;
-
-  }
+}
 
 img {
   max-width: 100%;
@@ -43,7 +40,8 @@ html {
   padding: 0 0;
 
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
-  }
+}
+
 .button {
   font: inherit;
   font-weight: 700;
@@ -54,39 +52,39 @@ html {
   text-transform: uppercase;
 
   border: none;
-  }
+}
 
 .button-brown {
-    width: 142px;
-    height: 27px;
-    background-color: #766357;
-  }
+  width: 142px;
+  height: 27px;
+  background-color: #766357;
+}
 
 .button-brown:hover,
 .button-brown:focus {
   background-color: #604e43;
-  }
+}
 
 .button-brown:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
-  }
+}
 
 .button-blue {
   width: 110px;
   height: 27px;
   background-color: #81b3d2;
-  }
+}
 
 .button-blue:hover,
 .button-blue:focus {
   background-color: #669ec0;
-  }
+}
 
 .button-blue:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
-  }
+}
 
 .button-blue.disabled,
 .button-blue:disabled {
@@ -94,7 +92,7 @@ html {
   opacity: 0.5;
   color: #ffffff;
   background-color: #81b3d2;
-  }
+}
 
 .button-brown.disabled,
 .button-brown:disabled {
@@ -102,7 +100,7 @@ html {
   opacity: 0.5;
   color: #ffffff;
   background-color: #766357;
-  }
+}
 
 .visually-hidden {
   position: absolute;
@@ -115,14 +113,12 @@ html {
   overflow: hidden;
   }
 
-
   /* шапка*/
 
 .main-header {
   line-height: 26px;
   font-weight: 700;
   background-color: #ffffff;
-
 }
 
 .main-logo {
@@ -172,7 +168,6 @@ html {
   text-align: left;
 }
 
-
 .site-nav li:nth-child(4n-1) a,
 .site-nav li:nth-child(4n) a {
   display: block;
@@ -184,7 +179,7 @@ html {
 .site-nav-in a:hover,
 .site-nav-in a:focus,
 .site-nav-in a:active{
-    color: #766357;
+  color: #766357;
 }
 
 /* баннер*/
@@ -212,7 +207,6 @@ html {
   display: block;
   margin: 0 auto;
 }
-
 
 /* введение*/
 
@@ -254,8 +248,6 @@ html {
 
 .feature-blue {
   width: 100%;
-
-
   background-color: #81b3d2;
 }
 
@@ -263,7 +255,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-height: 256px;
+  min-height: 256px;
 }
 
 .wrap-text {
@@ -352,7 +344,6 @@ height: 256px;
 .rec-souvenir {
   padding-top: 100px;
 
-
   background-image: url("../img/icon-2.svg");
   background-repeat: no-repeat;
   background-position: center top;
@@ -375,7 +366,6 @@ height: 256px;
 
 .search-hotel {
   padding-top: 50px;
-
   text-align: center;
   line-height: 24px;
 
@@ -410,23 +400,37 @@ height: 256px;
   height: 86px;
 }
 
-
-
 /* форма поиска на главной*/
 
 @keyframes bounce {
   0% {
-    transform: translateY(-110px);
-
-  }
-
+  transform: translateY(-110px);
+}
   100% {
-
-    transform: translateY(0);
+  transform: translateY(0);
   }
 }
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
 
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
 
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
 
 .mod {
   position: relative;
@@ -441,6 +445,9 @@ height: 256px;
   animation: bounce 1s;
 }
 
+.mod-error {
+  animation: shake 1s;
+}
 
 .search-form {
   position: absolute;
@@ -495,7 +502,6 @@ height: 256px;
   background-color: #ffffff;
   outline: 2px solid #e5e5e5;
 }
-
 
 .search-item input::placeholder,
 .search-item input:focus::placeholder {
@@ -721,7 +727,6 @@ input[type="checkbox"]:focus+label::before {
 
   background: none;
   border: none;
-  -moz-appearance: textfield;
 }
 
 .range-controls {
@@ -745,7 +750,7 @@ input[type="checkbox"]:focus+label::before {
 
 .range-toggle {
   position: absolute;
-  top: -8px;
+  top: -9px;
 
   width: 20px;
   height: 20px;
@@ -755,6 +760,14 @@ input[type="checkbox"]:focus+label::before {
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
+}
+
+.range-toggle:hover {
+  width: 22px;
+  height: 24px;
+  top: -11px;
+  border: 8px solid #ffffff;
+  background: #ababab;
 }
 
 .range-toggle-min {
@@ -784,10 +797,8 @@ input[type="checkbox"]:focus+label::before {
 .filter-button:hover,
 .filter-button:focus {
   color: #000000;
-
   background-color: #ffffff;
 }
-
 
 /*сортировка*/
 
@@ -906,6 +917,7 @@ input[type="checkbox"]:focus+label::before {
 
   list-style: none;
 }
+
 .hotels-item  {
   display: flex;
   align-items: flex-start;
@@ -914,6 +926,7 @@ input[type="checkbox"]:focus+label::before {
 
   border-top: 1px solid #e5e5e5;
 }
+
 .hotels-info {
   display: flex;
   flex-direction: column;
@@ -929,15 +942,15 @@ input[type="checkbox"]:focus+label::before {
 
 .hotels-item img {
    margin-left: 72px;
-
 }
+
 .found-hotels .hotel-name {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
   color: #000000;
-
 }
+
 .found-hotels .hotel-name:hover,
 .found-hotels .hotel-name:focus {
   color: #81b3d2;
@@ -954,20 +967,20 @@ input[type="checkbox"]:focus+label::before {
   margin-top: 8px;
   text-align: left;
   vertical-align: middle;
-  }
+}
+
 .info-booking {
   margin-top: 15px;
-
-  }
+}
 
 .info-booking .button-blue {
   margin-right: 3px;
-  }
+}
 
 .hotels-info .button-blue,
 .hotels-info .button-brown {
   padding: 4px 17px;
-  }
+}
 
 .hotel-rating {
   display: flex;
@@ -977,8 +990,7 @@ input[type="checkbox"]:focus+label::before {
   width: 110px;
   margin-left: auto;
   margin-right: 72px;
-
-  }
+}
 
 .star {
   display: inline-block;
@@ -991,15 +1003,19 @@ input[type="checkbox"]:focus+label::before {
   background-size: 18px 17px;
   background-repeat: space;
 }
+
 .star-4 {
   width: 89px;
 }
+
 .star-3 {
   width: 66px;
 }
+
 .star-2 {
   width: 41px;
 }
+
 .rating{
  display: block;
  font-size: 14px;
@@ -1036,7 +1052,6 @@ input[type="checkbox"]:focus+label::before {
 
   border: none;
 }
-
 
 /*подвал*/
 
@@ -1075,7 +1090,6 @@ input[type="checkbox"]:focus+label::before {
   line-height: 16px;
   font-weight: 700;
   color: #000000;
-
 }
 
 .sedona-hashtag {
@@ -1087,7 +1101,6 @@ input[type="checkbox"]:focus+label::before {
   display: flex;
   flex-wrap: wrap;
   width: 400px;
-
 }
 
 .footer-sm ul{
@@ -1096,9 +1109,12 @@ input[type="checkbox"]:focus+label::before {
   width: 150px;
   justify-content: space-between;
   list-style: none;
-  margin: auto ;
+  margin:  auto ;
   padding: 0;
+}
 
+.sm-item{
+  margin-top: 6px;
 }
 
 .sm-item a {
@@ -1120,6 +1136,7 @@ input[type="checkbox"]:focus+label::before {
 .sm-icon:active {
   background-color: #5496bd;
 }
+
 .sm-icon:active path {
   fill: rgba(255, 255, 255, 0.3);
 }
@@ -1139,11 +1156,11 @@ input[type="checkbox"]:focus+label::before {
   margin-right: 8px;
 }
 
-.logo-htmlacademy path:hover,
-.logo-htmlacademy path:focus {
+.logo-htmla:focus path ,
+.logo-htmla:hover path  {
   fill: #81b3d2;
 }
 
-.logo-htmlacademy path:active {
+.logo-htmla:active path {
   fill: #bdbbbc;
 }
