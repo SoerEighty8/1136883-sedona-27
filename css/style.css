@@ -763,11 +763,7 @@ input[type="checkbox"]:focus+label::before {
 }
 
 .range-toggle:hover {
-  width: 22px;
-  height: 24px;
-  top: -11px;
-  border: 8px solid #ffffff;
-  background: #ababab;
+  transform: scale(1.1);
 }
 
 .range-toggle-min {
